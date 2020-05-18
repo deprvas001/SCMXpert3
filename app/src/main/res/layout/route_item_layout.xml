@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/event_id_view"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_id"
+            android:textSize="11dp"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/event_id"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:text="0899908"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/event_id_view"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/partner_id_view"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/partnerid"
+            android:textSize="11dp"
+            android:layout_below="@+id/event_id"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/partner_id"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:text="0899908"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/event_id"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/partner_id_view"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/partner_name_view"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/partner_name"
+            android:textSize="11dp"
+            android:layout_below="@+id/partner_id"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/partner_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:text="0899908"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/partner_id"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/partner_name_view"
+            />
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/event_name_view"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_name"
+            android:textSize="11dp"
+            android:layout_below="@+id/partner_name"
+            />
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/partner_name"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/event_name_view"
+            android:text="0899908"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shipment_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shipment_id_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/shipment_id">
+
+            <EditText
+                android:id="@+id/shipment_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:textColor="@color/shipment_detail"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shipment_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/shipment_number">
+
+            <EditText
+                android:id="@+id/shipment_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:textColor="@color/shipment_detail"
+                android:singleLine="true"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/type_reference">
+
+            <EditText
+                android:id="@+id/refernce_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:editable="false"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@color/shipment_detail"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/type_reference_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/type_reference">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/edit_background">
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/type_of_reference"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:singleLine="true"
+
+                />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/connected_device_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/connected_device">
+
+            <EditText
+                android:id="@+id/connected_device"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:editable="false"
+                android:focusable="false"
+                android:textColor="@color/shipment_detail"
+                android:textColorHint="@color/shipment_background"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shipment_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/shipment_description">
+
+            <EditText
+                android:id="@+id/shipment_description"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="20dp"
+                android:editable="false"
+                android:focusable="false"
+                android:paddingLeft="10dp"
+                android:gravity="top"
+                android:textColor="@color/shipment_detail"
+                android:textSize="14sp"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

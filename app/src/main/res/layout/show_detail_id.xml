@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    >
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/shippment_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Id"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/device_id"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Device ID:"
+        android:textSize="11dp"
+        android:layout_below="@id/shippment_id"
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/internal_temp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Internal temp: "
+        android:textSize="11dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/device_id"
+        android:layout_below="@id/shippment_id"
+        />
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Event name:"
+        android:textSize="11dp"
+        android:layout_below="@id/device_id"
+        />
+
+    <TextView
+        android:id="@+id/battery"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Battery:"
+        android:textSize="11dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/event_name"
+        android:layout_below="@id/device_id"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/event_name">
+
+    <TextView
+        android:id="@+id/report_type"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Report type:"
+        android:textSize="11dp"
+        android:layout_below="@id/deliver_date"
+        />
+
+    <TextView
+        android:id="@+id/mode_of"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Mode of"
+        android:textSize="11dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/create_date"
+        android:layout_below="@id/deliver_date"
+        />
+    </LinearLayout>
+</RelativeLayout>

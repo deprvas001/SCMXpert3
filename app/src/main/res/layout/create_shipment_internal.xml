@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="secondaryShipment"
+            type="com.example.scmxpert.model.NewShipment" />
+    </data>
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shipment_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/internal_shipment">
+
+            <EditText
+                android:id="@+id/internal_shipment_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:focusable="false"
+                android:textColor="@color/shipment_detail"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:text="@{secondaryShipment.internal_shipment_id}"
+                android:singleLine="true"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/customer_name">
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:focusable="false"
+                android:editable="false"
+                android:textColor="@color/shipment_detail"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="@android:color/black"
+            android:hint="@string/partner_name">
+
+            <EditText
+                android:id="@+id/partner_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:focusable="false"
+                android:textColor="@color/shipment_detail"
+                android:editable="false"
+                android:singleLine="true"
+                android:background="@drawable/edit_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>

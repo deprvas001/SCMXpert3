@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="primary_mode">
+        <item>Select Primary Mode</item>
+        <item>Road</item>
+        <item>Ocean</item>
+        <item>Rail</item>
+        <item>Air</item>
+        <item>Barge</item>
+        <item>Space shuttle</item>
+    </string-array>
+
+    <string-array name="inco_terms">
+        <item>Select Inco Terms</item>
+        <item>DDP - Duty Paid</item>
+        <item>FOB - Free on Board</item>
+        <item>EXW - Ex Works</item>
+        <item>FCA - Free Carrier</item>
+        <item>CPT - Carriage Paid To</item>
+        <item>CIP - Carriage and Insurance Paid To</item>
+        <item>DAT - Delivered at Terminal</item>
+        <item>DAP - Delivered at Place</item>
+        <item>FAS - Free Alongside Ship</item>
+        <item>CFR - Cost and Freight</item>
+        <item>CIF - Cost Insurance and Freight</item>
+    </string-array>
+
+    <string-array name="time_interval">
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Months</item>
+
+    </string-array>
+</resources>

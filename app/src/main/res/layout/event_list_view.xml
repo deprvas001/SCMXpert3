@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="-20dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:src="@drawable/ic_delete_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/padd_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            >
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/thumbnail"
+            android:layout_height="@dimen/thumbnail"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/activity_padding_horizontal"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/event_id_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail"
+            android:ellipsize="end"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:maxLines="1"
+            android:text="Event ID: "
+            android:textColor="@color/description"
+            android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/event_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/event_id_view"
+                android:ellipsize="end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
+                android:maxLines="1"
+                android:text="Event"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+
+            <TextView
+            android:id="@+id/event_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_id"
+            android:text="Event: "
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/thumbnail"
+            android:textColor="@color/description"
+            android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/event_id"
+                android:text="Event"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="5dp"
+                android:layout_toRightOf="@id/event_name_view"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/partner_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_name"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="Partner: "
+            android:layout_toRightOf="@id/thumbnail"
+            android:textColor="@color/description"
+            android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/partner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/event_name"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Event"
+                android:layout_toRightOf="@id/partner_name_view"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+
+        <TextView
+            android:id="@+id/partner_id_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/partner_name"
+            android:text="Partner ID: "
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/thumbnail"
+            android:textColor="@color/description"
+            android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/partner_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/partner_name"
+                android:text="Event"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/partner_id_view"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/thumbnail"
+            android:textColor="@color/colorAccent"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

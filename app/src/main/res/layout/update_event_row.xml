@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/edit_background"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    >
+
+
+    <TextView
+        android:id="@+id/udpate_id_view"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event ID:"
+        android:padding="5dp"
+        android:textSize="11dp"
+
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/update_event_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/udpate_id_view"
+        />
+
+    <TextView
+        android:id="@+id/update_partner_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Partner:"
+        android:padding="5dp"
+        android:textSize="11dp"
+        android:layout_below="@id/update_event_id"
+        />
+
+    <TextView
+        android:id="@+id/update_partner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/update_partner_view"
+        android:layout_below="@id/update_event_id"
+        />
+
+    <TextView
+        android:id="@+id/update_event_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event:"
+        android:padding="5dp"
+        android:textSize="11dp"
+        android:layout_below="@id/update_partner"
+        />
+
+    <TextView
+        android:id="@+id/update_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/update_event_view"
+        android:layout_below="@id/update_partner"
+        />
+
+    <TextView
+        android:id="@+id/update_date_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:padding="5dp"
+        android:textSize="11dp"
+        android:layout_below="@id/update_event_view"
+        />
+
+    <TextView
+        android:id="@+id/update_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="11dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/update_date_view"
+        android:layout_below="@id/update_event_view"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/update_date">
+
+        <TextView
+            android:id="@+id/update_status_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Event Status:"
+            android:textSize="11dp"
+
+            />
+
+        <TextView
+            android:id="@+id/update_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:textSize="11dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/update_status_view"
+            />
+
+        <ImageView
+            android:id="@+id/update"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/downarrow"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="shipment"
+            type="com.example.scmxpert.model.NewShipment" />
+    </data>
+
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.CompleteShipmentFill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/view_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/create_shipment"
+                android:layout_marginRight="?android:attr/actionBarSize"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include android:id="@+id/shipment_details"
+                    layout="@layout/create_shipment_internal"
+                    bind:secondaryShipment="@{shipment}"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/shipment_number"
+                    android:textColorHint="@android:color/black">
+
+                    <EditText
+                        android:id="@+id/shipment_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_background"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/barcode"
+                        android:textColor="@color/shipment_detail"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:text="@string/scan_shipment"
+                    android:textColor="@color/view_background" />
+
+                <TextView
+                    android:id="@+id/type_of_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="14sp"
+                    android:hint="@string/type_reference"
+                    android:textColorHint="@android:color/black"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_background">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/type_reference"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/shipment_description_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/shipment_description"
+                    android:textColorHint="@android:color/black">
+
+                    <EditText
+                        android:id="@+id/shipment_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/edit_background"
+                        android:gravity="top"
+                        android:focusable="true"
+                        android:textColor="@color/shipment_detail"
+                        android:focusableInTouchMode="true"
+                        android:textSize="14sp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/route_details"
+                    android:textSize="14sp"
+                    android:textColorHint="@android:color/black"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_background">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/route_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                         />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/route_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:text="@string/add_route"
+                    android:visibility="gone"
+                    android:textColor="@color/view_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/good_type"
+                    android:textSize="14sp"
+                    android:textColorHint="@android:color/black"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_background">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/goods_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/device"
+                    android:visibility="gone"
+                    android:textSize="14sp"
+                    android:textColorHint="@android:color/black"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:background="@drawable/edit_background">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/device_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:drawableRight="@drawable/barcode"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/device"
+                    android:textColorHint="@android:color/black">
+
+                    <EditText
+                        android:id="@+id/device_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_background"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:padding="10dp"
+                        android:editable="false"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:singleLine="true"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/barcode"
+                        android:textColor="@color/shipment_detail"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:text="@string/scan_device"
+                    android:textColor="@color/view_background" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:hint="@string/expected_del_date"
+                    android:textColorHint="@android:color/black">
+
+                    <EditText
+                        android:id="@+id/expect_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_background"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:focusable="false"
+                        android:textColor="@color/shipment_detail"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:textSize="14sp"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submit_shipment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/create_shipment"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>
