@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.scmxpert">
+    package="com.development.scmxpert">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.SplashScreen"
+        <activity android:name="com.development.scmxpert.views.SplashScreen"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -31,49 +31,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.UserLogin"
+        <activity android:name="com.development.scmxpert.views.UserLogin"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.MapHome"
+            android:name="com.development.scmxpert.views.MapHome"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.QrCodeScreen"
+            android:name="com.development.scmxpert.views.QrCodeScreen"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.ShipmentHome"
+            android:name="com.development.scmxpert.views.ShipmentHome"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
-        <activity android:name=".views.ShipmentGraph"
+        <activity android:name="com.development.scmxpert.views.ShipmentGraph"
             android:screenOrientation="portrait"/>
-        <activity android:name=".views.MapActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".views.AddRoute"
-            android:theme="@style/AppTheme1"
+        <activity android:name="com.development.scmxpert.views.MapActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.FilterScreen"
+            android:name="com.development.scmxpert.views.AddRoute"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.createShipment.CreateShipment"
+            android:name="com.development.scmxpert.views.FilterScreen"
             android:theme="@style/AppTheme1"
-            android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.updateEvent.UpdateEvent"
+            android:name="com.development.scmxpert.views.createShipment.CreateShipment"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.CompleteShipmentFill"
+            android:name="com.development.scmxpert.views.updateEvent.UpdateEvent"
             android:theme="@style/AppTheme1"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.Test"
+            android:name="com.development.scmxpert.views.CompleteShipmentFill"
+            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.development.scmxpert.views.Test"
             android:label="@string/title_activity_test"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -90,24 +90,24 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".map.Map"
+            android:name="com.development.scmxpert.map.Map"
             android:label="@string/title_activity_map"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.ShipmentDetails"
+            android:name="com.development.scmxpert.views.ShipmentDetails"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.HomeScreen"
+            android:name="com.development.scmxpert.views.HomeScreen"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.forgotPassword.ForgotPassword"
+            android:name="com.development.scmxpert.views.forgotPassword.ForgotPassword"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".views.login.LoginScreen"
+            android:name="com.development.scmxpert.views.login.LoginScreen"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait">
 

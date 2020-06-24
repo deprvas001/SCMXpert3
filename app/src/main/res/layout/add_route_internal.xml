@@ -4,7 +4,7 @@
     <data>
         <variable
             name="addroute"
-            type="com.example.scmxpert.model.AddRouteClass" />
+            type="com.development.scmxpert.model.AddRouteClass" />
     </data>
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"

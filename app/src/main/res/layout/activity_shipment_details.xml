@@ -37,7 +37,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <com.example.scmxpert.viewClick.CustomViewPager
+    <com.development.scmxpert.viewClick.CustomViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

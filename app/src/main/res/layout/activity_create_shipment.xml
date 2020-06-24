@@ -5,7 +5,7 @@
     <data>
         <variable
             name="shipment"
-            type="com.example.scmxpert.model.NewShipment" />
+            type="com.development.scmxpert.model.NewShipment" />
     </data>
 
 <RelativeLayout
